@@ -7,6 +7,10 @@ sap.ui.define(
                 var oControl = oCore.byId("idSpidy")
                 oControl.setEnabled(false)
                 alert(oControl.getValue());
+            },
+            enableBtn: function(){
+                var oBtn=sap.ui.getCore().byId("idBtn")
+                oBtn.attachPress(this.myFunction)
             }
         })
     }
