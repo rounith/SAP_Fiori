@@ -9,7 +9,7 @@ sap.ui.define(
             },
             enableBtn: function(){
                 var oBtn=sap.ui.getCore().byId("idBtn")
-                oBtn.attachPress(this.myFunction)
+                oBtn.attachPress(this.myFunction);
             }
         })
     }
