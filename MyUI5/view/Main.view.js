@@ -11,6 +11,5 @@ sap.ui.jsview("tom.view.Main",
             text:"Rounith is here"
         });  
         return [oInp,oSpiderman];
-    }
-
+    } 
 });

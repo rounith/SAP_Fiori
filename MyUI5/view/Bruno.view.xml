@@ -1,0 +1,4 @@
+<core:View controllername="tom.controller.Main" xmlns="sap.m"
+        xmlns:core="sap.ui.core">
+    <Button text="Hello"></Button>
+</core:View>
