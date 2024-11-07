@@ -1,6 +1,6 @@
 <core:View controllerName="tom.controller.Bruno" xmlns="sap.m"
         xmlns:core="sap.ui.core">
     <Input id="userName" />
-    <Input id="password"/>
+    <Input id="password" type="Password"/>
     <Button id="submit" text="Submit" press="mySubmit" />
 </core:View>
