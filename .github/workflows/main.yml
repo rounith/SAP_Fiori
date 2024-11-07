@@ -3,7 +3,7 @@ name: Update README with latest commit
 on:
   push:
     branches:
-      - main  # or the branch you want to track
+      - main  # or whichever branch you want to track
 
 jobs:
   update-readme:
@@ -17,9 +17,10 @@ jobs:
         id: get_commit
         run: echo "::set-output name=message::$(git log -1 --pretty=%B)"
 
-      - name: Update README.md
+      - name: Update README.md with latest commit
         run: |
-          echo "Latest Commit: ${{ steps.get_commit.outputs.message }}" > README.md
+          # Replace the line starting with "Latest Commit:" in README.md
+          sed -i '/^Latest Commit:/c\Latest Commit: ${{ steps.get_commit.outputs.message }}' README.md
         shell: bash
 
       - name: Commit and push changes
