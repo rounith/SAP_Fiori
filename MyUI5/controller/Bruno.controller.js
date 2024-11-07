@@ -12,7 +12,7 @@ sap.ui.define(
                     document.write("<h2>Hello World!</h2>")
                 }
                 else{
-                    alert("Incorrect!")
+                    alert("Incorrect!");
                 }
             }
         })
