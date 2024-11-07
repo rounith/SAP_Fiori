@@ -8,9 +8,15 @@
         </script>
         <script>
             var oView= new sap.ui.view({
+                id:"bruno",
                 viewName: 'tom.view.Bruno',
                 type: "XML"
             });
+            var oJView= new sap.ui.view({
+                viewName: 'tom.view.Main',
+                type: "JS"
+            });
+            oJView.placeAt("spidy"); 
             oView.placeAt("spidy"); 
         </script>
     </head>
