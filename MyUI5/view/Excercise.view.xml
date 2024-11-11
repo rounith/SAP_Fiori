@@ -5,6 +5,6 @@
         <Label text="password"/>
         <Input id="Password" type="Password" width="40%"/>
         <Label/>
-        <Button text="Login" press="mySubmit" width="40%"/>
+        <Button text="Login" press="mySubmit" width="40%" type="Accept"/>
     </f:SimpleForm>
 </core:View>

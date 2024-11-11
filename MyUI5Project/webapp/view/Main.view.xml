@@ -1,0 +1,14 @@
+<core:View xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core.mvc" xmlns="sap.m" controllerName="cloud4c.fiori.controller.Main">
+	<f:SimpleForm editable="true" id="simpleForm">
+		<Label text="EmpID"></Label>
+		<Input width="40%" value="{/empStr/empId}"></Input>
+		<Label text="EmpName"></Label>
+		<Input width="40%" value= "{/empStr/empName}"></Input>
+		<Label text="Salary"></Label>
+		<Input width="40%" id="idSalary"></Input>
+		<Label text="Currency"></Label>
+		<Input width="40%" id="idCurr"></Input>
+        <Label></Label>
+		<Button text="Click Me" width="40%" press="Magic"></Button>
+	</f:SimpleForm>
+</core:View>
