@@ -25,7 +25,8 @@ sap.ui.define(
 				oCurr.bindProperty("value","/empStr/currency")
 			},
 			Magic : function(){
-				var oForm=this.getView().byId("simpleForm")
+				//Technique 2: Using arent child and loop
+				/*var oForm=this.getView().byId("simpleForm")
 				var oContent=oForm.getContent()
 				for(let i=0;i<oContent.length;i++){
 					const element=oContent[i]
@@ -35,7 +36,16 @@ sap.ui.define(
 					else if(element.getMetadata().getName()==="sap.m.Input" && element.getEnabled()===true){
 						element.setEnabled(false)
 					}
-				}
+				}*/
+				
+				//Technique 3: Using binding
+				//1: get the object of the model again
+				var oSpider=sap.ui.getCore().getModel()
+				//2: change thee value in the model for status property by address
+				if(oSpider.getProperty("/empStr/status")==false)
+					oSpider.setProperty("/empStr/status",true)
+				else
+					oSpider.setProperty("/empStr/status",false)
 			}
 		});
 });
