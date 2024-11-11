@@ -32,7 +32,7 @@ sap.ui.define(
 					if(element.getMetadata().getName()==="sap.m.Input" && element.getEnabled()===false){
 						element.setEnabled(true)
 					}
-					if(element.getMetadata().getName()==="sap.m.Input" && element.getEnabled()===true){
+					else if(element.getMetadata().getName()==="sap.m.Input" && element.getEnabled()===true){
 						element.setEnabled(false)
 					}
 				}
