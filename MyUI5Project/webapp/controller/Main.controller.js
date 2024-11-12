@@ -1,20 +1,14 @@
 sap.ui.define(
-	["cloud4c/fiori/controller/Basecontroller"],
-	function(Basecontroller){
+	["cloud4c/fiori/controller/Basecontroller",
+		'cloud4c/fiori/models/models'
+	],
+	function(Basecontroller, Models){
 		return Basecontroller.extend("cloud4c.fiori.controller.Main",{
 			onInit: function(){
+				
 				//create a Model object
-				var oModel= new sap.ui.model.json.JSONModel()
+				var oModel= Models.createMyJSONModel()
 				//Set or load data in the model
-				oModel.setData({
-					"empStr":{
-						"empId": 100,
-						"empName":"Rounith",
-						"salary": 9500,
-						"currency":"INR",
-						"status":false
-					}
-				})
 				// Make the model aware to the application
 				sap.ui.getCore().setModel(oModel)
 				// Binding -4 ways 
@@ -37,7 +31,7 @@ sap.ui.define(
 						element.setEnabled(false)
 					}
 				}*/
-				
+
 				//Technique 3: Using binding
 				//1: get the object of the model again
 				var oSpider=sap.ui.getCore().getModel()

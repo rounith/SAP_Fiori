@@ -1,0 +1,9 @@
+{
+    "empStr":{
+			    "empId": 100,
+			    "empName":"Rounith",
+			    "salary": 9500,
+			    "currency":"INR",
+			    "status":false
+		}
+    }
