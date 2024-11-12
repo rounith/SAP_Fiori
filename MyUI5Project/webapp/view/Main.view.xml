@@ -3,7 +3,7 @@
 		<Label text="EmpID"></Label>
 		<Input width="40%" value="{/empStr/empId}" enabled="{/empStr/status}"></Input>
 		<Label text="EmpName"></Label>
-		<Input width="40%" value= "{/empStr/empName}" enabled="{/empStr/status}"></Input>
+		<Input width="40%" value= "{iron>/empStr/empName}" enabled="{/empStr/status}"></Input>
 		<Label text="Salary"></Label>
 		<Input width="40%" id="idSalary" enabled="{/empStr/status}"></Input>
 		<Label text="Currency"></Label>
@@ -12,3 +12,8 @@
 		<Button text="Click Me" width="40%" press="Magic"></Button>
 	</f:SimpleForm>
 </core:View>
+
+<!-- **** when you multiple models to bind data use > this with model name 
+to get data from that model if not used then it will take default model
+For example: {/empStr/empId} (This will take data from default model)
+			 {iron>/empStr/empId} (This will take data from iron named model)-->

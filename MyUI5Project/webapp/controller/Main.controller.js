@@ -7,11 +7,14 @@ sap.ui.define(
 			onInit: function(){
 				
 				//create a Model object, Set or load data in the model
-				var oModel= Models.createMyJSONModel()
+				var oModel= Models.createMyJSONModel("models/mockdata/sample.json")
+				//Multimodel concept
+				var oMulModel= Models.createMyJSONModel("models/mockdata/multimodel.json")
 
 				// Make the model aware to the application
 				sap.ui.getCore().setModel(oModel)
-				
+				sap.ui.getCore().setModel(oMulModel,"iron")
+
 				// Binding -4 ways 
 				this._bindValue()
 			},
