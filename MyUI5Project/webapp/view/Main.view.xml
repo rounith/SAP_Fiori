@@ -1,15 +1,18 @@
 <core:View xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core.mvc" xmlns="sap.m" controllerName="cloud4c.fiori.controller.Main">
 	<f:SimpleForm editable="true" id="simpleForm">
 		<Label text="EmpID"></Label>
-		<Input width="40%" value="{/empStr/empId}" enabled="{/empStr/status}"></Input>
+		<Input width="40%" id="idId" enabled="{/empStr/status}"></Input>
 		<Label text="EmpName"></Label>
-		<Input width="40%" value= "{iron>/empStr/empName}" enabled="{/empStr/status}"></Input>
+		<Input width="40%"  id="idName" enabled="{/empStr/status}"></Input>
 		<Label text="Salary"></Label>
 		<Input width="40%" id="idSalary" enabled="{/empStr/status}"></Input>
 		<Label text="Currency"></Label>
 		<Input width="40%" id="idCurr" enabled="{/empStr/status}"></Input>
         <Label></Label>
 		<Button text="Click Me" width="40%" press="Magic"></Button>
+		<Label></Label>
+		<Button text="SampleJSON" width="40%" id="sample" press="Switch"></Button>
+		<Button text="MulModelJSON" width="40%" id="mulModel" press="MulSwitch"></Button>
 	</f:SimpleForm>
 </core:View>
 

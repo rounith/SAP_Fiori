@@ -25,8 +25,10 @@ sap.ui.define(
 				oSalary.bindValue("/empStr/salary")
 
 				//another way of binding using bindProperty
-				oCurr= this.getView().byId("idCurr")
-				oCurr.bindProperty("value","/empStr/currency")
+				this.getView().byId("idId").bindProperty("value","/empStr/empId")
+				this.getView().byId("idName").bindProperty("value","/empStr/empName")
+				this.getView().byId("idCurr").bindProperty("value","/empStr/currency")
+
 			},
 			Magic : function(){
 				//Technique 2: Using arent child and loop
@@ -44,12 +46,24 @@ sap.ui.define(
 
 				//Technique 3: Using binding
 				//1: get the object of the model again
-				var oSpider=sap.ui.getCore().getModel()
+				var oSpider = sap.ui.getCore().getModel()
 				//2: change thee value in the model for status property by address
 				if(oSpider.getProperty("/empStr/status")==false)
 					oSpider.setProperty("/empStr/status",true)
 				else
 					oSpider.setProperty("/empStr/status",false)
+			},
+			Switch: function(){
+					this.getView().byId("idId").bindProperty("value","/empStr/empId")
+					this.getView().byId("idName").bindProperty("value","/empStr/empName")
+					this.getView().byId("idSalary").bindProperty("value","/empStr/salary")
+					this.getView().byId("idCurr").bindProperty("value","/empStr/currency")
+			},
+			MulSwitch: function(){
+				this.getView().byId("idId").bindProperty("value","iron>/empStr/empId")
+					this.getView().byId("idName").bindProperty("value","iron>/empStr/empName")
+					this.getView().byId("idSalary").bindProperty("value","iron>/empStr/salary")
+					this.getView().byId("idCurr").bindProperty("value","iron>/empStr/currency")
 			}
 		});
 });
