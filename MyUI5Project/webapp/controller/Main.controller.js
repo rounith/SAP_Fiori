@@ -6,15 +6,22 @@ sap.ui.define(
 		return Basecontroller.extend("cloud4c.fiori.controller.Main",{
 			onInit: function(){
 				
-				//create a Model object
+				//create a Model object, Set or load data in the model
 				var oModel= Models.createMyJSONModel()
-				//Set or load data in the model
+
 				// Make the model aware to the application
 				sap.ui.getCore().setModel(oModel)
+				
 				// Binding -4 ways 
+				this._bindValue()
+			},
+			_bindValue:function(){
 				//1&2done inside views
+				//way of binding data using bindValue
 				var oSalary = this.getView().byId("idSalary")
 				oSalary.bindValue("/empStr/salary")
+
+				//another way of binding using bindProperty
 				oCurr= this.getView().byId("idCurr")
 				oCurr.bindProperty("value","/empStr/currency")
 			},
