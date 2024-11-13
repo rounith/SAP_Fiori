@@ -1,6 +1,9 @@
 <core:View xmlns:core2="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core.mvc" xmlns:t="sap.ui.table"
 			xmlns="sap.m" controllerName="cloud4c.fiori.controller.Main">
 	<t:Table rows="{/empTab}" alternateRowColors="true" selectionMode="Single" visibleRowCount="3" rowSelectionChange="Attach">
+	<t:title>
+		<Title text="Employee Details Table"></Title>
+	</t:title>
 		<t:columns>
 			<t:Column label="EmpID">
 				<t:template>
@@ -46,20 +49,23 @@
 		</t:columns>
 	</t:Table>
 	<f:SimpleForm editable="true" id="simpleForm">
+	<f:title>
+		<core2:Title text="Employee Details Form"></core2:Title>
+	</f:title>
 		<Label text="EmpID"></Label>
-		<Input width="40%" id="idId" value="{/empStr/empId}" enabled="{/empStr/status}"></Input>
+		<Input width="40%" id="idId" value="{empId}" enabled="{/empStr/status}"></Input>
 		<Label text="EmpName"></Label>
-		<Input width="40%"  id="idName" value="{/empStr/empName}" enabled="{/empStr/status}"></Input>
+		<Input width="40%"  id="idName" value="{empName}" enabled="{/empStr/status}"></Input>
 		<Label text="Salary"></Label>
-		<Input width="40%" id="idSalary" value="{/empStr/salary}" enabled="{/empStr/status}" />
+		<Input width="40%" id="idSalary" value="{salary}" enabled="{/empStr/status}" />
 		<Label text="Currency"></Label>
-		<Input width="40%" id="idSmoke" value="{/empStr/smoker}" enabled="{/empStr/status}"></Input>
+		<Input width="40%" id="idSmoke" value="{smoker}" enabled="{/empStr/status}"></Input>
 		<Label text="Gender"></Label>
-		<Image width="40px" height="40px" id="idgender" src="{/empStr/gender}" enabled="{/empStr/status}"></Image>
+		<Image width="40px" height="40px" id="idgender" src="{gender}"></Image>
 		<Label text="Martial Status"></Label>
-		<Input width="40%" id="idmStat" value="{/empStr/mStat}" enabled="{/empStr/status}"></Input>
+		<Input width="40%" id="idmStat" value="{mStat}" enabled="{/empStr/status}"></Input>
         <Label text="Rating"></Label>
-		<Input width="40%" id="idrating" value="{/empStr/rating}" enabled="{/empStr/status}"></Input>
+		<Input width="40%" id="idrating" value="{rating}" enabled="{/empStr/status}"></Input>
         <Label></Label>
 		<Button text="Click Me" width="40%" press="Magic"></Button>
 		<Label></Label>

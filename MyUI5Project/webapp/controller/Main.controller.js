@@ -63,8 +63,11 @@ sap.ui.define(
 				console.log("HI")
 			},
 			Attach:function(oGift){
-				var Path=this.oModel.getProperty(oGift.getParameters().rowContext.sPath)
-				this.oModel.setProperty("/empStr",Path)
+				// var Path=this.oModel.getProperty(oGift.getParameters().rowContext.sPath)
+				// this.oModel.setProperty("/empStr",Path)
+				var sPath=oGift.getParameter("rowContext").getPath()
+				var oSimpleForm=this.getView().byId("simpleForm")
+				oSimpleForm.bindElement(sPath)
 			}
 		});
 });
