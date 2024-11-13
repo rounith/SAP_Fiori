@@ -3,11 +3,11 @@
 		<Label text="EmpID"></Label>
 		<Input width="40%" id="idId" enabled="{/empStr/status}"></Input>
 		<Label text="EmpName"></Label>
-		<Input width="40%"  id="idName" enabled="{/empStr/status}"></Input>
+		<Input width="40%"  id="idName" value="{/empStr/empName}" enabled="{/empStr/status}"></Input>
 		<Label text="Salary"></Label>
-		<Input width="40%" id="idSalary" enabled="{/empStr/status}"></Input>
+		<Input width="40%" id="idSalary" value="{iron>/empStr/salary}" enabled="{/empStr/status}" />
 		<Label text="Currency"></Label>
-		<Input width="40%" id="idCurr" enabled="{/empStr/status}"></Input>
+		<Input width="40%" id="idCurr" value="{= ${/empStr/empName} === 'Vijay' ? 900 : 456}" enabled="{/empStr/status}"></Input>
         <Label></Label>
 		<Button text="Click Me" width="40%" press="Magic"></Button>
 		<Label></Label>

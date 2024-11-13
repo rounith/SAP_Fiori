@@ -16,18 +16,22 @@ sap.ui.define(
 				sap.ui.getCore().setModel(oMulModel,"iron")
 
 				// Binding -4 ways 
+				
+				this.getView().byId("idId").bindProperty("value","/empStr/empId")
+				var oSalary = this.getView().byId("idSalary")
 				this._bindValue()
 			},
 			_bindValue:function(){
 				//1&2done inside views
 				//way of binding data using bindValue
-				var oSalary = this.getView().byId("idSalary")
-				oSalary.bindValue("/empStr/salary")
+				
+				
+		
+
+				
+				//oSalary.bindValue("/empStr/salary")
 
 				//another way of binding using bindProperty
-				this.getView().byId("idId").bindProperty("value","/empStr/empId")
-				this.getView().byId("idName").bindProperty("value","/empStr/empName")
-				this.getView().byId("idCurr").bindProperty("value","/empStr/currency")
 
 			},
 			Magic : function(){

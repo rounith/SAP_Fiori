@@ -4,6 +4,6 @@
 			    "empName":"Rounith",
 			    "salary": 9500,
 			    "currency":"INR",
-			    "status":false
+			    "status":true
 			}
 }
