@@ -4,6 +4,52 @@
 			    "empName":"Vijay",
 			    "salary": 500,
 			    "currency":"USD",
-			    "status":false
-			}
+			    "status":true
+			},
+	"empTab":[
+			{
+				"empId": 342,
+				"empName": "Ananya",
+				"salary": 7200,
+				"currency": "USD",
+				"smoker": false,
+				"gender": "Female",
+				"mStat": "Single",
+				"rating": 3,
+				"status": true
+			},
+			{
+				"empId": 478,
+				"empName": "Rajesh",
+				"salary": 12000,
+				"currency": "EUR",
+				"smoker": true,
+				"gender": "Male",
+				"mStat": "Married",
+				"rating": 5,
+				"status": true
+			},
+			{
+				"empId": 291,
+				"empName": "Sneha",
+				"salary": 3400,
+				"currency": "INR",
+				"smoker": false,
+				"gender": "Female",
+				"mStat": "Single",
+				"rating": 2,
+				"status": false
+			},
+			{
+				"empId": 509,
+				"empName": "Arjun",
+				"salary": 8600,
+				"currency": "AUD",
+				"smoker": true,
+				"gender": "Male",
+				"mStat": "Divorced",
+				"rating": 4,
+				"status": true
+			}		
+	]
 }

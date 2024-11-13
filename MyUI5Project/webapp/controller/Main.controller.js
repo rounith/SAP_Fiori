@@ -4,22 +4,19 @@ sap.ui.define(
 	],
 	function(Basecontroller, Models){
 		return Basecontroller.extend("cloud4c.fiori.controller.Main",{
+			oMulModel: Models.createMyJSONModel("models/mockdata/multimodel.json"),
+			oModel: Models.createMyJSONModel("models/mockdata/sample.json"),
 			onInit: function(){
 				
 				//create a Model object, Set or load data in the model
-				var oModel= Models.createMyJSONModel("models/mockdata/sample.json")
+				
 				//Multimodel concept
-				var oMulModel= Models.createMyJSONModel("models/mockdata/multimodel.json")
+				
 
 				// Make the model aware to the application
-				sap.ui.getCore().setModel(oModel)
-				sap.ui.getCore().setModel(oMulModel,"iron")
-
+				sap.ui.getCore().setModel(this.oModel)
 				// Binding -4 ways 
 				
-				this.getView().byId("idId").bindProperty("value","/empStr/empId")
-				var oSalary = this.getView().byId("idSalary")
-				this._bindValue()
 			},
 			_bindValue:function(){
 				//1&2done inside views
@@ -58,16 +55,12 @@ sap.ui.define(
 					oSpider.setProperty("/empStr/status",false)
 			},
 			Switch: function(){
-					this.getView().byId("idId").bindProperty("value","/empStr/empId")
-					this.getView().byId("idName").bindProperty("value","/empStr/empName")
-					this.getView().byId("idSalary").bindProperty("value","/empStr/salary")
-					this.getView().byId("idCurr").bindProperty("value","/empStr/currency")
+				sap.ui.getCore().setModel(this.oModel)
+				console.log("Hello")
 			},
 			MulSwitch: function(){
-				this.getView().byId("idId").bindProperty("value","iron>/empStr/empId")
-					this.getView().byId("idName").bindProperty("value","iron>/empStr/empName")
-					this.getView().byId("idSalary").bindProperty("value","iron>/empStr/salary")
-					this.getView().byId("idCurr").bindProperty("value","iron>/empStr/currency")
+				sap.ui.getCore().setModel(this.oMulModel)
+				console.log("HI")
 			}
 		});
 });

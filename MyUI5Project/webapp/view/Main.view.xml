@@ -1,8 +1,8 @@
-<core:View xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core.mvc" xmlns:t="sap.ui.table"
+<core:View xmlns:core2="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core.mvc" xmlns:t="sap.ui.table"
 			xmlns="sap.m" controllerName="cloud4c.fiori.controller.Main">
 	<f:SimpleForm editable="true" id="simpleForm">
 		<Label text="EmpID"></Label>
-		<Input width="40%" id="idId" enabled="{/empStr/status}"></Input>
+		<Input width="40%" id="idId" value="{/empStr/empId}" enabled="{/empStr/status}"></Input>
 		<Label text="EmpName"></Label>
 		<Input width="40%"  id="idName" value="{/empStr/empName}" enabled="{/empStr/status}"></Input>
 		<Label text="Salary"></Label>
@@ -15,7 +15,7 @@
 		<Button text="SampleJSON" width="40%" id="sample" press="Switch"></Button>
 		<Button text="MulModelJSON" width="40%" id="mulModel" press="MulSwitch"></Button>
 	</f:SimpleForm>
-	<t:Table rows="{/empTab}">
+	<t:Table rows="{/empTab}" alternateRowColors="true" selectionMode="Single" visibleRowCount="3">
 		<t:columns>
 			<t:Column label="EmpID">
 				<t:template>
@@ -29,7 +29,7 @@
 			</t:Column>
 			<t:Column label="Salary">
 				<t:template>
-					<Text text="{salary}"></Text>
+					<Text text="{currency} {salary}"></Text>
 				</t:template>
 			</t:Column>
 			<t:Column label="Smoking">
@@ -44,7 +44,13 @@
 			</t:Column>
 			<t:Column label="Martial Status">
 				<t:template>
-					<ComboBox value="{mStat}"></ComboBox>
+					<ComboBox selectedKey="{mStat}">
+						<items>
+							<core2:Item key="Single" text="Single"></core2:Item>
+							<core2:Item key="Married" text="Married"></core2:Item>
+							<core2:Item key="Divorced" text="Divorced"></core2:Item>
+						</items>
+					</ComboBox>
 				</t:template>
 			</t:Column>
 		</t:columns>
