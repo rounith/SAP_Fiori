@@ -6,9 +6,9 @@
 		<Label text="EmpName"></Label>
 		<Input width="40%"  id="idName" value="{/empStr/empName}" enabled="{/empStr/status}"></Input>
 		<Label text="Salary"></Label>
-		<Input width="40%" id="idSalary" value="{iron>/empStr/salary}" enabled="{/empStr/status}" />
+		<Input width="40%" id="idSalary" value="{= ${/empStr/empName} === 'Vijay' ? 500000 : 50}" enabled="{/empStr/status}" />
 		<Label text="Currency"></Label>
-		<Input width="40%" id="idCurr" value="{= ${/empStr/empName} === 'Vijay' ? 900 : 456}" enabled="{/empStr/status}"></Input>
+		<Input width="40%" id="idCurr" value="{/empStr/currency}" enabled="{/empStr/status}"></Input>
         <Label></Label>
 		<Button text="Click Me" width="40%" press="Magic"></Button>
 		<Label></Label>
@@ -24,7 +24,27 @@
 			</t:Column>
 			<t:Column label="EmpName">
 				<t:template>
-					<Text text="{empName}"></Text>
+					<Input value="{empName}"></Input>
+				</t:template>
+			</t:Column>
+			<t:Column label="Salary">
+				<t:template>
+					<Text text="{salary}"></Text>
+				</t:template>
+			</t:Column>
+			<t:Column label="Smoking">
+				<t:template>
+					<CheckBox selected="{smoker}"></CheckBox>
+				</t:template>
+			</t:Column>
+			<t:Column label="Rating">
+				<t:template>
+					<RatingIndicator value="{rating}"></RatingIndicator>
+				</t:template>
+			</t:Column>
+			<t:Column label="Martial Status">
+				<t:template>
+					<ComboBox value="{mStat}"></ComboBox>
 				</t:template>
 			</t:Column>
 		</t:columns>
@@ -35,3 +55,5 @@
 to get data from that model if not used then it will take default model
 For example: {/empStr/empId} (This will take data from default model)
 			 {iron>/empStr/empId} (This will take data from iron named model)-->
+
+<!-- DropBox is Depricated instead use COMBOBOX-->

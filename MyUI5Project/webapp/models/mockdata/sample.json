@@ -12,6 +12,10 @@
 			"empName":"Rounith",
 			"salary": 9500,
 		    "currency":"INR",
+			"smoker":false,
+			"gender":"Male",
+			"mStat":"Single",
+			"rating":5,
 		    "status":true
 		},
 		{
@@ -19,6 +23,10 @@
 			"empName":"Vijay",
 			"salary": 500,
 		    "currency":"USD",
+			"smoker":false,
+			"gender":"Male",
+			"mStat":"Married",
+			"rating":4,
 		    "status":true
 		},
 		{
@@ -26,6 +34,10 @@
 			"empName":"Manideep",
 			"salary": 200,
 		    "currency":"EURO",
+			"smoker":true,
+			"gender":"Female",
+			"mStat":"Single",
+			"rating":3,
 		    "status":true
 		},
 		{
@@ -33,6 +45,10 @@
 			"empName":"Goutham",
 			"salary": 100,
 		    "currency":"DRM",
+			"smoker":false,
+			"gender":"Male",
+			"mStat":"Single",
+			"rating":5,
 		    "status":true
 		}
 	]
