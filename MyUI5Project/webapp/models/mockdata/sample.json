@@ -5,5 +5,35 @@
 			    "salary": 9500,
 			    "currency":"INR",
 			    "status":true
-			}
+			},
+	"empTab":[
+		{
+			"empId": 100,
+			"empName":"Rounith",
+			"salary": 9500,
+		    "currency":"INR",
+		    "status":true
+		},
+		{
+			"empId": 200,
+			"empName":"Vijay",
+			"salary": 500,
+		    "currency":"USD",
+		    "status":true
+		},
+		{
+			"empId": 300,
+			"empName":"Manideep",
+			"salary": 200,
+		    "currency":"EURO",
+		    "status":true
+		},
+		{
+			"empId": 400,
+			"empName":"Goutham",
+			"salary": 100,
+		    "currency":"DRM",
+		    "status":true
+		}
+	]
 }

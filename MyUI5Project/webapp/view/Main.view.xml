@@ -1,4 +1,5 @@
-<core:View xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core.mvc" xmlns="sap.m" controllerName="cloud4c.fiori.controller.Main">
+<core:View xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core.mvc" xmlns:t="sap.ui.table"
+			xmlns="sap.m" controllerName="cloud4c.fiori.controller.Main">
 	<f:SimpleForm editable="true" id="simpleForm">
 		<Label text="EmpID"></Label>
 		<Input width="40%" id="idId" enabled="{/empStr/status}"></Input>
@@ -14,6 +15,20 @@
 		<Button text="SampleJSON" width="40%" id="sample" press="Switch"></Button>
 		<Button text="MulModelJSON" width="40%" id="mulModel" press="MulSwitch"></Button>
 	</f:SimpleForm>
+	<t:Table rows="{/empTab}">
+		<t:columns>
+			<t:Column label="EmpID">
+				<t:template>
+					<Text text="{empId}"></Text>
+				</t:template>
+			</t:Column>
+			<t:Column label="EmpName">
+				<t:template>
+					<Text text="{empName}"></Text>
+				</t:template>
+			</t:Column>
+		</t:columns>
+	</t:Table>
 </core:View>
 
 <!-- **** when you multiple models to bind data use > this with model name 
