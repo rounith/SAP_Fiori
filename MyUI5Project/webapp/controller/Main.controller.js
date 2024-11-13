@@ -61,6 +61,10 @@ sap.ui.define(
 			MulSwitch: function(){
 				sap.ui.getCore().setModel(this.oMulModel)
 				console.log("HI")
+			},
+			Attach:function(oGift){
+				var Path=this.oModel.getProperty(oGift.getParameters().rowContext.sPath)
+				this.oModel.setProperty("/empStr",Path)
 			}
 		});
 });

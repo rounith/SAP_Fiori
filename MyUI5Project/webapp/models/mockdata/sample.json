@@ -1,10 +1,14 @@
 {
     "empStr":{
-			    "empId": 100,
-			    "empName":"Rounith",
-			    "salary": 9500,
-			    "currency":"INR",
-			    "status":true
+			    "empId": 342,
+				"empName": "Ananya",
+				"salary": 7200,
+				"currency": "USD",
+				"smoker": false,
+				"gender": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ1fyAvp-KmDTwIXpYB_YH-lvIqrzVGKCdsw&s",
+				"mStat": "Single",
+				"rating": 3,
+				"status": true
 			},
 	"empTab":[
 		{
@@ -13,7 +17,7 @@
 			"salary": 9500,
 		    "currency":"INR",
 			"smoker":false,
-			"gender":"Male",
+			"gender":"https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/silhouette-male-user-icon.png",
 			"mStat":"Single",
 			"rating":5,
 		    "status":true
@@ -24,7 +28,7 @@
 			"salary": 500,
 		    "currency":"USD",
 			"smoker":false,
-			"gender":"Male",
+			"gender":"https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/silhouette-male-user-icon.png",
 			"mStat":"Married",
 			"rating":4,
 		    "status":true
@@ -35,7 +39,7 @@
 			"salary": 200,
 		    "currency":"EURO",
 			"smoker":true,
-			"gender":"Female",
+			"gender":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ1fyAvp-KmDTwIXpYB_YH-lvIqrzVGKCdsw&s",
 			"mStat":"Single",
 			"rating":3,
 		    "status":true
@@ -46,7 +50,7 @@
 			"salary": 100,
 		    "currency":"DRM",
 			"smoker":false,
-			"gender":"Male",
+			"gender":"https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/silhouette-male-user-icon.png",
 			"mStat":"Single",
 			"rating":5,
 		    "status":true

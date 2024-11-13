@@ -1,21 +1,6 @@
 <core:View xmlns:core2="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core.mvc" xmlns:t="sap.ui.table"
 			xmlns="sap.m" controllerName="cloud4c.fiori.controller.Main">
-	<f:SimpleForm editable="true" id="simpleForm">
-		<Label text="EmpID"></Label>
-		<Input width="40%" id="idId" value="{/empStr/empId}" enabled="{/empStr/status}"></Input>
-		<Label text="EmpName"></Label>
-		<Input width="40%"  id="idName" value="{/empStr/empName}" enabled="{/empStr/status}"></Input>
-		<Label text="Salary"></Label>
-		<Input width="40%" id="idSalary" value="{= ${/empStr/empName} === 'Vijay' ? 500000 : 50}" enabled="{/empStr/status}" />
-		<Label text="Currency"></Label>
-		<Input width="40%" id="idCurr" value="{/empStr/currency}" enabled="{/empStr/status}"></Input>
-        <Label></Label>
-		<Button text="Click Me" width="40%" press="Magic"></Button>
-		<Label></Label>
-		<Button text="SampleJSON" width="40%" id="sample" press="Switch"></Button>
-		<Button text="MulModelJSON" width="40%" id="mulModel" press="MulSwitch"></Button>
-	</f:SimpleForm>
-	<t:Table rows="{/empTab}" alternateRowColors="true" selectionMode="Single" visibleRowCount="3">
+	<t:Table rows="{/empTab}" alternateRowColors="true" selectionMode="Single" visibleRowCount="3" rowSelectionChange="Attach">
 		<t:columns>
 			<t:Column label="EmpID">
 				<t:template>
@@ -30,6 +15,11 @@
 			<t:Column label="Salary">
 				<t:template>
 					<Text text="{currency} {salary}"></Text>
+				</t:template>
+			</t:Column>
+			<t:Column label="Gender">
+				<t:template>
+				<Image src="{gender}" width="20px" height="20px"></Image>
 				</t:template>
 			</t:Column>
 			<t:Column label="Smoking">
@@ -55,6 +45,27 @@
 			</t:Column>
 		</t:columns>
 	</t:Table>
+	<f:SimpleForm editable="true" id="simpleForm">
+		<Label text="EmpID"></Label>
+		<Input width="40%" id="idId" value="{/empStr/empId}" enabled="{/empStr/status}"></Input>
+		<Label text="EmpName"></Label>
+		<Input width="40%"  id="idName" value="{/empStr/empName}" enabled="{/empStr/status}"></Input>
+		<Label text="Salary"></Label>
+		<Input width="40%" id="idSalary" value="{/empStr/salary}" enabled="{/empStr/status}" />
+		<Label text="Currency"></Label>
+		<Input width="40%" id="idSmoke" value="{/empStr/smoker}" enabled="{/empStr/status}"></Input>
+		<Label text="Gender"></Label>
+		<Image width="40px" height="40px" id="idgender" src="{/empStr/gender}" enabled="{/empStr/status}"></Image>
+		<Label text="Martial Status"></Label>
+		<Input width="40%" id="idmStat" value="{/empStr/mStat}" enabled="{/empStr/status}"></Input>
+        <Label text="Rating"></Label>
+		<Input width="40%" id="idrating" value="{/empStr/rating}" enabled="{/empStr/status}"></Input>
+        <Label></Label>
+		<Button text="Click Me" width="40%" press="Magic"></Button>
+		<Label></Label>
+		<Button text="SampleJSON" width="40%" id="sample" press="Switch"></Button>
+		<Button text="MulModelJSON" width="40%" id="mulModel" press="MulSwitch"></Button>
+	</f:SimpleForm>
 </core:View>
 
 <!-- **** when you multiple models to bind data use > this with model name 
