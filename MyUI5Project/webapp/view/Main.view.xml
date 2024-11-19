@@ -5,37 +5,37 @@
 		<Title text="Employee Details Table"></Title>
 	</t:title>
 		<t:columns>
-			<t:Column label="EmpID">
+			<t:Column label="{i18n>XFLD_EMPID}">
 				<t:template>
 					<Text text="{empId}"></Text>
 				</t:template>
 			</t:Column>
-			<t:Column label="EmpName">
+			<t:Column label="{i18n>XFLD_EmpName}">
 				<t:template>
 					<Input value="{ path : 'empName',formatter : '.changeNameToUC'}" ></Input>
 				</t:template>
 			</t:Column>
-			<t:Column label="Salary">
+			<t:Column label="{i18n>XFLD_SAL}">
 				<t:template>
 					<Text text="{currency} {salary}"></Text>
 				</t:template>
 			</t:Column>
-			<t:Column label="Gender">
+			<t:Column label="{i18n>XCOL_GEN}">
 				<t:template>
 				<Image src="{gender}" width="20px" height="20px"></Image>
 				</t:template>
 			</t:Column>
-			<t:Column label="Smoking">
-				<!--<t:template>
-					<CheckBox selected="{= $smoker=='true' ? true : false}"></CheckBox>
-				</t:template>-->
+			<t:Column label="{i18n>XCOL_SMK}">
+				<t:template>
+					<CheckBox selected="{= $smoker == 'true' ? true : false}"></CheckBox>
+				</t:template>
 			</t:Column>
-			<t:Column label="Rating">
-				<!--<t:template>
+			<t:Column label="{i18n>XCOL_RATE}">
+				<t:template>
 					<RatingIndicator value="{rating}"></RatingIndicator>
-				</t:template>-->
+				</t:template>
 			</t:Column>
-			<t:Column label="Martial Status">
+			<t:Column label="{i18n>XCOL_MSTAT}">
 				<t:template>
 					<ComboBox selectedKey="{mStat}">
 						<items>
@@ -52,22 +52,22 @@
 	<f:title>
 		<core2:Title text="Employee Details Form"></core2:Title>
 	</f:title>
-		<Label text="EmpID"></Label>
+		<Label text="{i18n>XFLD_EMPID}"></Label>
 		<Input width="40%" id="idId" value="{empId}"></Input>
-		<Label text="EmpName"></Label>
+		<Label text="{i18n>XFLD_EmpName}"></Label>
 		<Input width="40%"  id="idName" value="{empName}"></Input>
-		<Label text="Salary"></Label>
+		<Label text="{i18n>XFLD_SAL}"></Label>
 		<Input width="40%" id="idSalary" value="{salary}" />
-		<Label text="Currency"></Label>
+		<Label text="{i18n>XCOL_SMK}"></Label>
 		<Input width="40%" id="idSmoke" value="{smoker}" ></Input>
-		<Label text="Gender"></Label>
+		<Label text="{i18n>XCOL_GEN}"></Label>
 		<Image width="40px" height="40px" id="idgender" src="{gender}"></Image>
-		<Label text="Martial Status"></Label>
+		<Label text="{i18n>XCOL_RATE}"></Label>
 		<Input width="40%" id="idmStat" value="{mStat}"></Input>
-        <Label text="Rating"></Label>
+        <Label text="{i18n>XCOL_RATE}"></Label>
 		<Input width="40%" id="idrating" value="{rating}" ></Input>
         <Label></Label>
-		<Button text="Click Me" width="40%" press="Magic"></Button>
+		<Button text="{i18n>XBUT__CLICKME}" width="40%" press="Magic"></Button>
 		<Label></Label>
 		<Button text="SampleJSON" width="40%" id="sample" press="Switch"></Button>
 		<Button text="MulModelJSON" width="40%" id="mulModel" press="MulSwitch"></Button>

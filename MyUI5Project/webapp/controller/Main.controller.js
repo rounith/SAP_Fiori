@@ -10,8 +10,9 @@ sap.ui.define(
 			oModel: Models.createMyJSONModel("models/mockdata/sample.json"),
 			onInit: function(){
 				
+				var oResource = Models.createMyResourceModel()
 				//create a Model object, Set or load data in the model
-				
+				sap.ui.getCore().setModel(oResource,"i18n")
 				//Multimodel concept
 				var oXml=Models.createMyXMLModel("models/mockdata/samplexml.xml")
 				sap.ui.getCore().setModel(oXml)
@@ -86,12 +87,16 @@ sap.ui.define(
 				oTable.bindRows("/empTab/row")
 				console.log("XML")
 			},
+			ResourceModel:function(){
+				sap.ui.getCore().setModel(this.oResource)
+
+			},
 			Attach:function(oGift){
 				// var Path=this.oModel.getProperty(oGift.getParameters().rowContext.sPath)
 				// this.oModel.setProperty("/empStr",Path)
 				var sPath=oGift.getParameter("rowContext").getPath()
 				var oSimpleForm=this.getView().byId("simpleForm")
-				oSimpleForm.bindElement(sPath).toUpperCase()
+				oSimpleForm.bindElement(sPath)
 			}
 		});
 });
