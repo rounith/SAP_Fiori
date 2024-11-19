@@ -1,12 +1,19 @@
 sap.ui.define(
-    ['sap/ui/model/json/JSONModel'],
-    function(JSONModel){
+    ['sap/ui/model/json/JSONModel',
+        'sap/ui/model/xml/XMLModel'],
+    function(JSONModel,XMLModel){
         return{
             createMyJSONModel: function(filePath){
                 var oModel = new JSONModel()
                 oModel.loadData(filePath)
                 return oModel
+            },
+            createMyXMLModel: function(filePath){
+                var oXml = new XMLModel()
+                oXml.loadData(filePath)
+                return oXml
             }
+
         }
 })
 //1. create function

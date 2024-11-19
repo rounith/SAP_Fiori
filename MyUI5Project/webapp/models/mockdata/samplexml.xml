@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <empStr>
+        <empId>56525</empId>
+        <empName>ajni</empName>
+        <salary>15336</salary>
+        <mSta>Married</mSta>
+        <currency>INr</currency>
+        <gender>https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/silhouette-male-user-icon.png</gender>
+        <rating>4</rating>
+    </empStr>
+    <empTab>
+        <row>
+        <empId>490</empId>
+        <empName>Rounith</empName>
+        <salary>5455</salary>
+        <currency>INr</currency>
+        <smoker>true</smoker>
+        <mStat>Married</mStat>
+        <gender>https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/silhouette-male-user-icon.png</gender>
+        <rating>4</rating>
+        </row>
+    </empTab>
+</data>
