@@ -12,7 +12,7 @@
 			</t:Column>
 			<t:Column label="{i18n>XFLD_EmpName}">
 				<t:template>
-					<Input value="{ path : 'empName',formatter : '.changeNameToUC'}" ></Input>
+					<Input value="{ path : 'empName',formatter : '.formatter.changeNameToUC'}" ></Input>
 				</t:template>
 			</t:Column>
 			<t:Column label="{i18n>XFLD_SAL}">
@@ -80,4 +80,4 @@ to get data from that model if not used then it will take default model
 For example: {/empStr/empId} (This will take data from default model)
 			 {iron>/empStr/empId} (This will take data from iron named model)-->
 
-<!-- DropBox is Depricated instead use COMBOBOX-->
+<!-- DropBox is Depricated instead use COMBOBOX or SELECT-->

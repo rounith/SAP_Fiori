@@ -1,15 +1,16 @@
 sap.ui.define(
 	["cloud4c/fiori/controller/Basecontroller",
 		'cloud4c/fiori/models/models',
+		'cloud4c/fiori/util/formatter'
 
 	],
-	function(Basecontroller, Models){
+	function(Basecontroller, Models, Formatter ){
 		return Basecontroller.extend("cloud4c.fiori.controller.Main",{
+			formatter:Formatter,
 			oMulModel: Models.createMyJSONModel("models/mockdata/multimodel.json"),
 			oXml:Models.createMyXMLModel("models/mockdata/samplexml.xml"),
 			oModel: Models.createMyJSONModel("models/mockdata/sample.json"),
 			onInit: function(){
-				
 				var oResource = Models.createMyResourceModel()
 				//create a Model object, Set or load data in the model
 				sap.ui.getCore().setModel(oResource,"i18n")
@@ -23,12 +24,6 @@ sap.ui.define(
 				
 				// Binding -4 ways 
 				
-			},
-			changeNameToUC: function(inp){
-				if(inp){
-					return inp.toUpperCase()
-				}
-
 			},
 			_bindValue:function(){
 
