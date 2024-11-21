@@ -1,9 +1,11 @@
-<core:View xmlns:core2="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core.mvc" xmlns:t="sap.ui.table"
-			xmlns="sap.m" controllerName="cloud4c.fiori.controller.Main">
-	<t:Table id="idTab" alternateRowColors="true" selectionMode="Single" visibleRowCount="3" rowSelectionChange="Attach">
-	<t:title>
-		<Title text="Employee Details Table"></Title>
-	</t:title>
+<core:View xmlns:core2="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core.mvc"
+	xmlns:t="sap.ui.table"
+	xmlns="sap.m" controllerName="cloud4c.fiori.controller.Main">
+	<t:Table id="idTab" alternateRowColors="true" selectionMode="Single" visibleRowCount="3"
+		rowSelectionChange="Attach">
+		<t:title>
+			<Title text="Employee Details Table"></Title>
+		</t:title>
 		<t:columns>
 			<t:Column label="{i18n>XFLD_EMPID}">
 				<t:template>
@@ -12,7 +14,7 @@
 			</t:Column>
 			<t:Column label="{i18n>XFLD_EmpName}">
 				<t:template>
-					<Input value="{ path : 'empName',formatter : '.formatter.changeNameToUC'}" ></Input>
+					<Input value="{ path : 'empName',formatter : '.formatter.changeNameToUC'}"></Input>
 				</t:template>
 			</t:Column>
 			<t:Column label="{i18n>XFLD_SAL}">
@@ -22,7 +24,7 @@
 			</t:Column>
 			<t:Column label="{i18n>XCOL_GEN}">
 				<t:template>
-				<Image src="{gender}" width="20px" height="20px"></Image>
+					<Image src="{gender}" width="20px" height="20px"></Image>
 				</t:template>
 			</t:Column>
 			<t:Column label="{i18n>XCOL_SMK}">
@@ -49,29 +51,35 @@
 		</t:columns>
 	</t:Table>
 	<f:SimpleForm editable="true" id="simpleForm">
-	<f:title>
-		<core2:Title text="Employee Details Form"></core2:Title>
-	</f:title>
+		<f:title>
+			<core2:Title text="Employee Details Form"></core2:Title>
+		</f:title>
 		<Label text="{i18n>XFLD_EMPID}"></Label>
 		<Input width="40%" id="idId" value="{empId}"></Input>
 		<Label text="{i18n>XFLD_EmpName}"></Label>
-		<Input width="40%"  id="idName" value="{empName}"></Input>
+		<Input width="40%" id="idName" value="{empName}"></Input>
 		<Label text="{i18n>XFLD_SAL}"></Label>
 		<Input width="40%" id="idSalary" value="{salary}" />
 		<Label text="{i18n>XCOL_SMK}"></Label>
-		<Input width="40%" id="idSmoke" value="{smoker}" ></Input>
+		<Input width="40%" id="idSmoke" value="{smoker}"></Input>
 		<Label text="{i18n>XCOL_GEN}"></Label>
 		<Image width="40px" height="40px" id="idgender" src="{gender}"></Image>
 		<Label text="{i18n>XCOL_RATE}"></Label>
 		<Input width="40%" id="idmStat" value="{mStat}"></Input>
-        <Label text="{i18n>XCOL_RATE}"></Label>
-		<Input width="40%" id="idrating" value="{rating}" ></Input>
-        <Label></Label>
+		<Label text="{i18n>XCOL_RATE}"></Label>
+		<Input width="40%" id="idrating" value="{rating}"></Input>
+		<Label></Label>
 		<Button text="{i18n>XBUT__CLICKME}" width="40%" press="Magic"></Button>
 		<Label></Label>
 		<Button text="SampleJSON" width="40%" id="sample" press="Switch"></Button>
 		<Button text="MulModelJSON" width="40%" id="mulModel" press="MulSwitch"></Button>
 		<Button text="xmlModel" width="40%" id="xmlModel" press="xmlModel"></Button>
+		<Switch
+			id="languageSwitch"
+			state="false"
+			customTextOn="हिंदी"
+			customTextOff="English"
+			change=".onLanguageSwitchChange" />
 	</f:SimpleForm>
 </core:View>
 

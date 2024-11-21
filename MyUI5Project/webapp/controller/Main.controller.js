@@ -92,6 +92,25 @@ sap.ui.define(
 				var sPath=oGift.getParameter("rowContext").getPath()
 				var oSimpleForm=this.getView().byId("simpleForm")
 				oSimpleForm.bindElement(sPath)
+			},
+			onLanguageSwitchChange: function (oEvent) {
+				var bState = oEvent.getParameter("state");
+				var sLanguage = bState ? "hi" : "en";
+
+				var sCurrentUrl = window.location.href;
+				var sNewUrl;
+			
+				// Check if the URL already has 'sap-ui-language'
+				if (sCurrentUrl.includes("sap-ui-language=")) {
+					sNewUrl = sCurrentUrl.replace(/sap-ui-language=[a-z-]+/, "sap-ui-language=" + sLanguage);
+				} else {
+					var sSeparator = sCurrentUrl.includes("?") ? "&" : "?";
+					sNewUrl = sCurrentUrl + sSeparator + "sap-ui-language=" + sLanguage;
+				}
+			
+				// Redirect to the new URL
+				window.location.href = sNewUrl;
 			}
+			
 		});
 });
