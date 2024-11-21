@@ -15,10 +15,10 @@ sap.ui.define(
 				//create a Model object, Set or load data in the model
 				sap.ui.getCore().setModel(oResource,"i18n")
 				//Multimodel concept
-				var oXml=Models.createMyXMLModel("models/mockdata/samplexml.xml")
+				var oXml=Models.createMyJSONModel("models/mockdata/sample.json")
 				sap.ui.getCore().setModel(oXml)
 				oTable= this.getView().byId("idTab")
-				oTable.bindRows("/empTab/row")
+				oTable.bindRows("/empTab")
 
 				// Make the model aware to the application
 				
@@ -80,8 +80,6 @@ sap.ui.define(
 				sap.ui.getCore().setModel(this.oXml)
 				oTable= this.getView().byId("idTab")
 				oTable.bindRows("/empTab/row")
-				oSmoker=this.getView().byid("idSmoker")
-				oSmoker.bindProperty("selected",/empTab/row/smoker)
 				console.log("XML")
 			},
 			ResourceModel:function(){
