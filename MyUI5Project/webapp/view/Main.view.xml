@@ -27,7 +27,7 @@
 			</t:Column>
 			<t:Column label="{i18n>XCOL_SMK}">
 				<t:template>
-					<CheckBox selected="{= $smoker == 'true' ? true : false}"></CheckBox>
+					<CheckBox id="idSmoker" selected="{smoker}"></CheckBox>
 				</t:template>
 			</t:Column>
 			<t:Column label="{i18n>XCOL_RATE}">

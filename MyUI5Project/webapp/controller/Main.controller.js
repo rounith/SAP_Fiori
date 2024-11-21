@@ -80,6 +80,8 @@ sap.ui.define(
 				sap.ui.getCore().setModel(this.oXml)
 				oTable= this.getView().byId("idTab")
 				oTable.bindRows("/empTab/row")
+				oSmoker=this.getView().byid("idSmoker")
+				oSmoker.bindProperty("selected",/empTab/row/smoker)
 				console.log("XML")
 			},
 			ResourceModel:function(){
