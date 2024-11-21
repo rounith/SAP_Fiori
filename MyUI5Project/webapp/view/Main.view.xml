@@ -71,9 +71,9 @@
 		<Label></Label>
 		<Button text="{i18n>XBUT__CLICKME}" width="40%" press="Magic"></Button>
 		<Label></Label>
-		<Button text="SampleJSON" width="40%" id="sample" press="Switch"></Button>
-		<Button text="MulModelJSON" width="40%" id="mulModel" press="MulSwitch"></Button>
-		<Button text="xmlModel" width="40%" id="xmlModel" press="xmlModel"></Button>
+		<Button text="{i18n>XBUT__SAMPLE}" width="40%" id="sample" press="Switch"></Button>
+		<Button text="{i18n>XBUT__MUL}" width="40%" id="mulModel" press="MulSwitch"></Button>
+		<Button text="{i18n>XBUT__XML}" width="40%" id="xmlModel" press="xmlModel"></Button>
 		<Switch
 			id="languageSwitch"
 			state="false"

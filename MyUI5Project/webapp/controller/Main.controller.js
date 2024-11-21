@@ -95,7 +95,7 @@ sap.ui.define(
 			},
 			onLanguageSwitchChange: function (oEvent) {
 				var bState = oEvent.getParameter("state");
-				var sLanguage = bState ? "hi" : "en";
+				var sLanguage = bState ? "en" : "hi";
 
 				var sCurrentUrl = window.location.href;
 				var sNewUrl;
