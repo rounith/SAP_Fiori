@@ -20,7 +20,7 @@
 			<t:Column label="{i18n>XFLD_SAL}">
 				<t:template>
 					<Text text="{currency} {salary}"></Text>
-				</t:template>
+				</t:template> 
 			</t:Column>
 			<t:Column label="{i18n>XCOL_GEN}">
 				<t:template>
@@ -31,7 +31,7 @@
 				<t:template>
 					<CheckBox id="idSmoker" selected="{smoker}"></CheckBox>
 				</t:template>
-			</t:Column>
+			</t:Column> 
 			<t:Column label="{i18n>XCOL_RATE}">
 				<t:template>
 					<RatingIndicator value="{rating}"></RatingIndicator>

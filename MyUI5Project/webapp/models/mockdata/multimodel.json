@@ -13,7 +13,7 @@
 	"empTab":[
 			{
 				"empId": 342,
-				"empName": "Ananya",
+				"empName": "Ananya", 
 				"salary": 7200,
 				"currency": "USD",
 				"smoker": false,
