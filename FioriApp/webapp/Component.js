@@ -10,9 +10,16 @@ sap.ui.define(
                 UIComponent.prototype.init.apply(this)
             },
             createContent: function(){
-                return sap.m.Button({
-                    text: "Hello"
+                var oView = new sap.ui.view({
+                    type : "XML",
+                    viewName: "cloud4c.fioriApp.view.App"
                 })
+                var oView1 = new sap.ui.view({
+                    type : "XML",
+                    viewName: "cloud4c.fioriApp.view.View1"
+                })
+                oView.byId("rounith").addPage(oView1)
+                return oView
             },
             destroy: function(){
 

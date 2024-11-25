@@ -1,0 +1,8 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" >
+    <Page title="My First Fiori App">
+        <content>
+            <Button text="Fiori Button"></Button>
+        </content>
+    </Page>
+</mvc:View>
