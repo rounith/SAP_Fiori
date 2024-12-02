@@ -5,7 +5,7 @@ sap.ui.define(
         return Controller.extend("cloud4c.fioriApp.controller.View2",{
             onBack: function(){
                 var oApp=this.getView().getParent()
-                oApp.to("idView1")
+                oApp.to("idView1yy")
             }
         })
     })
