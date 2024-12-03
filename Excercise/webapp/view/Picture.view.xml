@@ -1,0 +1,8 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="cloud4c.fiori.excercise.controller.Picture">
+    <Page title="Picture" showNavButton="true" navButtonPress="onBack">
+        <content>
+            <Image src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg"></Image>
+        </content>
+    </Page>
+</mvc:View>

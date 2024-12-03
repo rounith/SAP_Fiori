@@ -5,6 +5,8 @@
 			<Button icon="sap-icon://action" tooltip="Next" press="onNext"/>
 		</headerContent>
         <content>
+        <SearchField id="mysearch"></SearchField>
+            <List id="idledo"></List>
         </content>
     </Page>
 </mvc:View>
