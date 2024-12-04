@@ -25,7 +25,7 @@ sap.ui.define(
                     type : "XML",
                     id:"idView2",
                     viewName: "cloud4c.fioriApp.view.View2"
-                });
+                }); Ovie23490
                 oView.byId("rounith").addPage(oView1).addPage(oView2);
                 return oView
             },
