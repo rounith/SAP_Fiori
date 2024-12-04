@@ -1,0 +1,63 @@
+{
+    "_version": "1.25.0",
+    "sap.app": {
+        "_version": "1.3.0",
+        "id": "cloud4c.firoApp",
+        "type": "application",
+        "i18n": "i18n/texts.properties",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+    },
+    "sap.ui": {
+        "_version": "1.3.0",
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_horizon",
+            "sap_belize"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "dependencies": {
+            "minUI5Version": "1.70.1",
+            "libs": {
+                "sap.ui.core": {
+                    "minVersion": "1.70.1"
+                },
+                "sap.m": {
+                    "minVersion": "1.70.1"
+                },
+                "sap.ui.layout": {
+                    "minVersion": "1.70.1"
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {},
+                "uri": "i18n/i18n.properties",
+                "preload": true,
+                "async": true
+            },
+            "local": {
+                "type": "sap.ui.model.json.JSONModel",
+                "settings": {},
+                "uri": "model/mockData/sampledata.json",
+                "preload": true
+            }
+        }
+    }
+}

@@ -2,7 +2,9 @@ sap.ui.define(
     ["sap/ui/core/UIComponent"],
     function(UIComponent){
         return UIComponent.extend("cloud4c.fioriApp.Component",{
-            metadata:{},
+            metadata:{
+                manifest:"json"
+            },
             
             init: function(){
                 //we have to call the super class contructor
@@ -25,7 +27,7 @@ sap.ui.define(
                     type : "XML",
                     id:"idView2",
                     viewName: "cloud4c.fioriApp.view.View2"
-                }); Ovie23490
+                });
                 oView.byId("rounith").addPage(oView1).addPage(oView2);
                 return oView
             },
