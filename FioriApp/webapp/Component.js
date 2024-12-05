@@ -11,9 +11,13 @@ sap.ui.define(
                 //when we call base class contructor,we arre invoking default functionality
                 //which is available free for us example router feature
                 UIComponent.prototype.init.apply(this)
+                //Routing
+                //router will creatte view objects.
+                this.oRouter = this.getRouter();
+                this.oRouter.initialize(); //this reads routing config from manifest.json
             },
 
-            createContent: function(){
+            /*createContent: function(){
                 var oView = new sap.ui.view({
                     type : "XML",
                     viewName: "cloud4c.fioriApp.view.App"
@@ -30,7 +34,7 @@ sap.ui.define(
                 });
                 oView.byId("rounith").addPage(oView1).addPage(oView2);
                 return oView
-            },
+            },*/
 
             destroy: function(){
 

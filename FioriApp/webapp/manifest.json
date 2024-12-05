@@ -4,13 +4,13 @@
         "_version": "1.3.0",
         "id": "cloud4c.firoApp",
         "type": "application",
-        "i18n": "i18n/texts.properties",
+        "i18n": "i18n/i18n.properties",
         "title": "{{appTitle}}",
         "description": "{{appDescription}}",
         "applicationVersion": {
             "version": "1.0.0"
         }
-    },
+    }, 
     "sap.ui": {
         "_version": "1.3.0",
         "technology": "UI5",
@@ -43,6 +43,39 @@
         "contentDensities": {
             "compact": true,
             "cozy": true
+        },
+        "rootView":{
+            "viewName":"cloud4c.fioriApp.view.App",
+            "type":"XML"
+        },
+        "routing":{
+            "config":{
+                "routerClass":"sap.m.routing.Router",
+                "viewPath":"cloud4c.fioriApp.view",
+                "viewType":"XML",
+                "controlId":"rounith"
+            },
+            "routes":[{
+                "pattern":"",
+                "name":"home",
+                "target":"modi"
+            },{
+                "pattern":"revath",
+                "name":"next",
+                "target":"revanth"
+            }],
+            "targets":{
+                "modi":{
+                    "viewName":"View1",
+                    "viewId":"idModi",
+                    "controlAggregation":"pages"
+                },
+                "revanth":{
+                    "viewName":"View2",
+                    "viewId":"idRevanth",
+                    "controlAggregation":"pages"
+                }
+            }
         },
         "models": {
             "i18n": {
