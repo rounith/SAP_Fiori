@@ -60,7 +60,7 @@
                 "name":"home",
                 "target":"modi"
             },{
-                "pattern":"revath",
+                "pattern":"revanth",
                 "name":"next",
                 "target":"revanth"
             }],
