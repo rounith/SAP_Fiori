@@ -1,8 +1,10 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m" controllerName="cloud4c.fioriApp.controller.View2">
-    <Page title="My Next" showNavButton="true" navButtonPress="onBack">
+    <Page title="{local>name}" showNavButton="true" navButtonPress="onBack">
         <content>
-            
+            <ObjectHeader title="{local>healthBenefit}" intro="{local>name}"
+                            number="{local>price}" icon="{local>imageURL}"
+                            numberUnit="{local>currency}"></ObjectHeader>
         </content>
     </Page>
 </mvc:View>

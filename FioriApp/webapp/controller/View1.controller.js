@@ -21,7 +21,15 @@ sap.ui.define(
             onItemPress: function(oEvent){
                 var oSelecteditem=oEvent.getParameter("listItem")
                 var oFruitName=oSelecteditem.getTitle()
-                this.onNext(oFruitName)
+                //below we are getting the relative path of each element 
+                debugger
+                var sPath=oSelecteditem.getBindingContextPath()// '/fruits/0' answer
+                var sIndex=sPath.split("/")[sPath.split("/").length-1]// we get '0'
+                // above oSelecteditem.getBindingContextPath().split("/") = ['', 'fruits', '0']
+                // oSelecteditem.getBindingContextPath().split("/").length-1 = 2
+                // oSelecteditem.getBindingContextPath().split("/")[oSelecteditem.getBindingContextPath().split("/").length-1] = '0'
+
+                this.onNext(sIndex)
             },
             onSearch: function (oEvent) {
                 // Get the search query
