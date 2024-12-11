@@ -1,0 +1,23 @@
+{
+    "MMItems": [
+      { "title": "Item 1", "description": "Description of Item 1" },
+      { "title": "Item 2", "description": "Description of Item 2" },
+      { "title": "Item 3", "description": "Description of Item 3" }
+    ],
+    "SDItems": [
+      { "title": "Item A", "description": "Description of Item A" },
+      { "title": "Item B", "description": "Description of Item B" },
+      { "title": "Item C", "description": "Description of Item C" }
+    ],
+    "FICOItems": [
+      { "title": "Alpha", "description": "Description of Alpha" },
+      { "title": "Beta", "description": "Description of Beta" },
+      { "title": "Gamma", "description": "Description of Gamma" }
+    ],
+    "FioriItems": [
+      { "title": "One", "description": "Description of One" },
+      { "title": "Two", "description": "Description of Two" },
+      { "title": "Three", "description": "Description of Three" }
+    ]
+  }
+  

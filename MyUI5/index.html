@@ -1,21 +1,171 @@
 <html>
-    <head>
-        <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-            data-sap-ui-libs="sap.m"
-            data-sap-ui-libs="sap_bluecrystal"
-            data-sap-ui-resourceroots='
+
+<head>
+    <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" data-sap-ui-libs="sap.m"
+        data-sap-ui-libs="sap_bluecrystal" data-sap-ui-resourceroots='
             {"tom" : "./"}'>
-        </script>
-        <script>
-            var oView= new sap.ui.view({
-                id:"Ex",
-                viewName: 'tom.view.Excercise',
-                type: "XML"
-            }); 
-            oView.placeAt("spidy"); 
-        </script>
-    </head>
-    <body class="sapUiBody">
-        <div id="spidy"></div> 
-    </body> 
+            </script>
+    <script>
+        var oView = new sap.ui.view({
+            id: "Ex",
+            viewName: 'tom.view.Excercise',
+            type: "XML"
+        });
+        oView.placeAt("content"); 
+    </script>
+    <style>
+        /* Full screen container */
+        .fullScreenContainer {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            background-image: url('images/sap-logo.png');
+            /* Set the background image */
+            background-size: contain;
+            /* Adjust the image size */
+            background-repeat: no-repeat;
+            /* Don't repeat the image */
+            background-position: center;
+            /* Center the image */
+        }
+
+        /* Make the titles absolute so they can be moved around */
+        #mmTitle,
+        #sdTitle,
+        #ficoTitle,
+        #fioriTitle {
+            position: absolute;
+            pointer-events: all;
+            /* Allow interactions */
+            transition: transform 0.1s ease;
+        }
+
+        /* Optional: add some visual styling for the titles */
+        .sapMTitle {
+            cursor: pointer;
+            font-size: 1.5em;
+            color: #2C3E50;
+            user-select: none;
+            /* Prevent text selection */
+        }
+
+
+
+        /* Styling for the background image */
+        .backgroundImage {
+            background-image: url('images/sap-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            max-height: 150px;
+        }
+
+
+        /* Flexbox to layout the title and lists horizontally */
+        .movingTitles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Each title box */
+        .titleBox {
+            margin: 10px;
+            width: 250px;
+            box-sizing: border-box;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for title boxes */
+        .titleBox:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Title text styling */
+        .titleBox .sapMTitle {
+            font-size: 1.5em;
+            color: #2C3E50;
+            margin-bottom: 15px;
+        }
+
+        /* List item styling */
+        .sapMListItemBase {
+            font-size: 1em;
+            color: #34495E;
+            padding: 8px 0;
+        }
+
+        /* Styling for the List component */
+        .sapMList {
+            max-height: 300px;
+            /* Fixed height for the list */
+            overflow-y: auto;
+            /* Allow scrolling if the list overflows */
+        }
+
+        .titleBox {
+            position: relative;
+        }
+
+        .titleBox:hover .infoList {
+            display: block;
+            /* Show the list on hover */
+        }
+
+        .infoList {
+            display: none;
+            /* Hide the list by default */
+            position: absolute;
+            /* Position the list below the title */
+            top: 20px;
+            left: 0;
+            width: 100%;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        /* Title Box responsiveness */
+        @media (max-width: 768px) {
+            .titleBox {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .movingTitles {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .backgroundImage {
+                max-height: 100px;
+            }
+
+            .titleBox {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body class="sapUiBody">
+    <div id="content"></div>
+</body>
+
 </html>

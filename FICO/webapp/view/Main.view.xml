@@ -1,0 +1,51 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          controllerName="cloud4c.fioriApp.controller.View1">
+    <Page enableScrolling="true" class="sapUiContentPadding" showHeader="false">
+        <content>
+            <VBox class="fullScreenContainer">
+                <!-- Background Image -->
+                <Image src="images/sap-logo.png" class="backgroundImage" alt="SAP Logo" />
+
+                <!-- Dynamic Titles and Lists -->
+                <FlexBox class="movingTitles" justifyContent="SpaceAround" wrap="Wrap">
+                    <VBox class="titleBox" ariaLabelledBy="mmTitle">
+                        <Title id="mmTitle" text="MM" level="H2" />
+                        <List>
+                            <StandardListItem title="Item 1" />
+                            <StandardListItem title="Item 2" />
+                            <StandardListItem title="Item 3" />
+                        </List>
+                    </VBox>
+
+                    <VBox class="titleBox" ariaLabelledBy="sdTitle">
+                        <Title id="sdTitle" text="SD" level="H2" />
+                        <List>
+                            <StandardListItem title="Item A" />
+                            <StandardListItem title="Item B" />
+                            <StandardListItem title="Item C" />
+                        </List>
+                    </VBox>
+
+                    <VBox class="titleBox" ariaLabelledBy="ficoTitle">
+                        <Title id="ficoTitle" text="FICO" level="H2" />
+                        <List>
+                            <StandardListItem title="Alpha" />
+                            <StandardListItem title="Beta" />
+                            <StandardListItem title="Gamma" />
+                        </List>
+                    </VBox>
+
+                    <VBox class="titleBox" ariaLabelledBy="fioriTitle">
+                        <Title id="fioriTitle" text="FIORI" level="H2" />
+                        <List>
+                            <StandardListItem title="One" />
+                            <StandardListItem title="Two" />
+                            <StandardListItem title="Three" />
+                        </List>
+                    </VBox>
+                </FlexBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

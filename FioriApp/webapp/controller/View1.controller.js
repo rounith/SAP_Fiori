@@ -1,6 +1,9 @@
 sap.ui.define(
-    ["sap/ui/core/mvc/Controller"],
-    function(Controller){
+    ["sap/ui/core/mvc/Controller",
+      "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator"
+    ],
+    function(Controller, Filter, FilterOperator){
         "use strict"
         return Controller.extend("cloud4c.fioriApp.controller.View1",{
             onInit: function(){
@@ -10,6 +13,30 @@ sap.ui.define(
                 //var oApp = this.getView().getParent()
                 //oApp.to("idView2") //give ID
                 this.oRouter.navTo("next")
+            },
+            onSearch: function (oEvent) {
+                // Get the search query
+                var sQuery = oEvent.getParameter("query");
+                var oList = this.getView().byId("idList");
+                var oBinding = oList.getBinding("items");
+            
+                // Apply filters if there's a query
+                var aFilters = [];
+                if (sQuery) {
+                    // Filter by name
+                    var oNameFilter = new Filter("name", FilterOperator.Contains, sQuery);
+                    // Filter by type (you can adjust this as needed)
+                    var oTypeFilter = new Filter("type", FilterOperator.Contains, sQuery);
+                    var oColorFilter= new Filter("color",FilterOperator.Contains, sQuery)
+                    // Combine filters using OR condition
+                    aFilters.push(new Filter({
+                        filters: [oNameFilter, oTypeFilter,oColorFilter],
+                        and: false
+                    }));
+                }
+            
+                // Update the list binding with filters
+                oBinding.filter(aFilters);
             }
         })
     })

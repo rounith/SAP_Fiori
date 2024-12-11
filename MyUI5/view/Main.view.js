@@ -13,3 +13,4 @@ sap.ui.jsview("tom.view.Main",
         return [oInp,oSpiderman];
     } 
 });
+

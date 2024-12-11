@@ -1,10 +1,85 @@
-<core:View controllerName="tom.controller.Bruno" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
-    <f:SimpleForm>
-        <Label text="userName" />
-        <Input id="user" width="40%"/>
-        <Label text="password"/>
-        <Input id="Password" type="Password" width="40%"/>
-        <Label/>
-        <Button text="Login" press="mySubmit" width="40%" type="Accept"/>
-    </f:SimpleForm>
-</core:View>
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:core="sap.ui.core"
+          controllerName="tom.controller.View1">
+    <Page enableScrolling="true" class="sapUiContentPadding" showHeader="false">
+        <content>
+            <VBox class="fullScreenContainer">
+                <Image class="backgroundImage" alt="SAP Logo" />
+                <FlexBox class="movingTitles" justifyContent="SpaceAround" wrap="Wrap">
+                    <!-- MM Tile -->
+                    <VBox class="titleBox">
+                        <Title id="mmTitle" text="MM" level="H2" />
+                        <List items="{/MMItems}">
+                            <CustomListItem>
+                                <VBox>
+                                    <Text text="{position}" />
+                                    <Select 
+                                        selectedKey="{name}" 
+                                        change=".onDropdownChange"
+                                        items="{/AllNames}">
+                                        <core:Item key="{key}" text="{text}" tooltip="{info}"/>
+                                    </Select>
+                                </VBox>
+                            </CustomListItem>
+                        </List>
+                    </VBox>
+
+                    <!-- SD Tile -->
+                    <VBox class="titleBox">
+                        <Title id="sdTitle" text="SD" level="H2" />
+                        <List items="{/SDItems}">
+                            <CustomListItem>
+                                <VBox>
+                                    <Text text="{position}" />
+                                    <Select 
+                                        selectedKey="{name}" 
+                                        change=".onDropdownChange"
+                                        items="{/AllNames}">
+                                        <core:Item key="{key}" text="{text}" tooltip="{info}"/>
+                                    </Select>
+                                </VBox>
+                            </CustomListItem>
+                        </List>
+                    </VBox>
+
+                    <!-- FICO Tile -->
+                    <VBox class="titleBox">
+                        <Title id="ficoTitle" text="FICO" level="H2" />
+                        <List items="{/FICOItems}">
+                            <CustomListItem>
+                                <VBox>
+                                    <Text text="{position}" />
+                                    <Select 
+                                        selectedKey="{name}" 
+                                        change=".onDropdownChange"
+                                        items="{/AllNames}">
+                                        <core:Item key="{key}" text="{text}" tooltip="{info}"/>
+                                    </Select>
+                                </VBox>
+                            </CustomListItem>
+                        </List>
+                    </VBox>
+
+                    <!-- Fiori Tile -->
+                    <VBox class="titleBox">
+                        <Title id="fioriTitle" text="FIORI" level="H2" />
+                        <List items="{/FioriItems}">
+                            <CustomListItem>
+                                <VBox>
+                                    <Text text="{position}" />
+                                    <Select 
+                                        selectedKey="{name}" 
+                                        change=".onDropdownChange"
+                                        items="{/AllNames}">
+                                        <core:Item key="{key}" text="{text}" tooltip="{info}" />
+                                    </Select>
+                                </VBox>
+                            </CustomListItem>
+                        </List>
+                    </VBox>
+                </FlexBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,70 @@
+{
+  "MMItems": [
+    { 
+      "name": "Lokesh", 
+      "position": "Senior", 
+      "info": "Current Project: Inventory Management\nTime Available: 2 hours/day\nClient Name: ABC Corp" 
+    },
+    { 
+      "name": "Imran", 
+      "position": "Mid", 
+      "info": "Current Project: Vendor Management\nTime Available: 4 hours/day\nClient Name: XYZ Pvt Ltd" 
+    },
+    { 
+      "name": "Vijay", 
+      "position": "Junior", 
+      "info": "Current Project: Procurement Automation\nTime Available: 3 hours/day\nClient Name: DEF Ltd" 
+    }
+  ],
+  "SDItems": [
+    { 
+      "name": "Busureddy", 
+      "position": "Senior", 
+      "info": "Current Project: Sales Tracking\nTime Available: 1 hour/day\nClient Name: LMN Corp" 
+    },
+    { 
+      "name": "Sushma", 
+      "position": "Mid", 
+      "info": "Current Project: Customer Support Integration\nTime Available: 2.5 hours/day\nClient Name: OPQ Pvt Ltd" 
+    },
+    { 
+      "name": "Govardhan", 
+      "position": "Junior", 
+      "info": "Current Project: Order Fulfillment\nTime Available: 5 hours/day\nClient Name: RST Inc" 
+    }
+  ],
+  "FICOItems": [
+    { 
+      "name": "Ramakrishna", 
+      "position": "Senior", 
+      "info": "Current Project: Financial Reporting\nTime Available: 3 hours/day\nClient Name: UVW Ltd" 
+    },
+    { 
+      "name": "Ramesh", 
+      "position": "Mid", 
+      "info": "Current Project: Budget Planning\nTime Available: 2 hours/day\nClient Name: GHI Corp" 
+    },
+    { 
+      "name": "Goutham", 
+      "position": "Junior", 
+      "info": "Current Project: Payroll System\nTime Available: 4 hours/day\nClient Name: JKL Pvt Ltd" 
+    }
+  ],
+  "FioriItems": [
+    { 
+      "name": "Sharath Babu", 
+      "position": "Senior", 
+      "info": "Current Project: UX Revamp\nTime Available: 2.5 hours/day\nClient Name: MNO Tech" 
+    },
+    { 
+      "name": "Rounith", 
+      "position": "Mid", 
+      "info": "Current Project: Dashboard Development\nTime Available: 3 hours/day\nClient Name: PQR Systems" 
+    },
+    { 
+      "name": "XYZ", 
+      "position": "Junior", 
+      "info": "Current Project: SAP Integration\nTime Available: 6 hours/day\nClient Name: STU Enterprises" 
+    }
+  ]
+}
