@@ -11,10 +11,17 @@ sap.ui.define(
             onInit: function(){
                 this.oRouter= this.getOwnerComponent().getRouter()
             },
-            onNext: function(){
+            onNext: function(ikaven){
                 //var oApp = this.getView().getParent()
                 //oApp.to("idView2") //give ID
-                this.oRouter.navTo("next")
+                this.oRouter.navTo("next",{
+                    kaven: ikaven
+                })
+            },
+            onItemPress: function(oEvent){
+                var oSelecteditem=oEvent.getParameter("listItem")
+                var oFruitName=oSelecteditem.getTitle()
+                this.onNext(oFruitName)
             },
             onSearch: function (oEvent) {
                 // Get the search query

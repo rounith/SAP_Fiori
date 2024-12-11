@@ -60,7 +60,7 @@
                 "name":"home",
                 "target":"modi"
             },{
-                "pattern":"revanth",
+                "pattern":"revanth/{kaven}",
                 "name":"next",
                 "target":"revanth"
             }],

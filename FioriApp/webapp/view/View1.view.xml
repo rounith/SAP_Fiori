@@ -6,10 +6,10 @@
 		</headerContent>
         <content>
         <SearchField id="mysearch" search="onSearch"></SearchField>
-        <List id="idList" items="{path:'local>/fruits', sorter:{path:'status', group:true}}">
+        <List id="idList" itemPress="onItemPress" items="{path:'local>/fruits', sorter:{path:'status', group:true}}">
             <items>
                 <ObjectListItem title="{local>name}" intro="{local>type}" icon="{local>imageURL}"
-                    number="{local>price}" numberUnit="{local>currency}">
+                    number="{local>price}" numberUnit="{local>currency}" type="Navigation">
                     <firstStatus>
                         <ObjectStatus text="{local>status}" state="{
                             path: 'local>status',
