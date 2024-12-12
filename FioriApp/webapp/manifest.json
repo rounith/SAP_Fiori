@@ -68,12 +68,12 @@
                 "modi":{
                     "viewName":"View1",
                     "viewId":"idModi",
-                    "controlAggregation":"pages"
+                    "controlAggregation":"masterPages"
                 },
                 "revanth":{
                     "viewName":"View2",
                     "viewId":"idRevanth",
-                    "controlAggregation":"pages"
+                    "controlAggregation":"detailPages"
                 }
             }
         },
