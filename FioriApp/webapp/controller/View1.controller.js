@@ -22,7 +22,6 @@ sap.ui.define(
                 var oSelecteditem=oEvent.getParameter("listItem")
                 var oFruitName=oSelecteditem.getTitle()
                 //below we are getting the relative path of each element 
-                debugger
                 var sPath=oSelecteditem.getBindingContextPath()// '/fruits/0' answer
                 var sIndex=sPath.split("/")[sPath.split("/").length-1]// we get '0'
                 // above oSelecteditem.getBindingContextPath().split("/") = ['', 'fruits', '0']
@@ -53,9 +52,40 @@ sap.ui.define(
                         and: false //in this filters and is default so we are keeping it as false
                     }));
                 }
-            
                 // Update the list binding with filters
                 oBinding.filter(aFilters);
+            },
+            showInConsole: function(oEvent){
+                //1.Get list control object
+                var oList = this.getView().byId("idList")
+                //2.get all the selected
+                var arr = oList.getSelectedItems();
+                //3. iterate to all the list items
+                arr.forEach(element => {
+                    console.log(element.getTitle())
+                });
+            },
+            onDelete: function(oEvent){
+                //1. Which item was clicked to be deleted
+                var deletedItem=oEvent.getParameter("listItem")
+                var sPath= deletedItem.getBindingContextPath()
+                var index= sPath.split("/")[sPath.split("/")-1]
+                //2. read all the model data
+                var oModel= this.getOwnerComponent().getModel("local")
+                var aData= oModel.getProperty("/fruits")
+                //3. delete the item @index
+                aData.splice(index,1)
+                //5. set back the data to the model
+                oModel.setProperty("/fruit",aData)
+            },
+            oChange: function(){
+                var oChan=this.getView().byId("idList")
+                var oMode=oChan.getProperty("mode")
+                if(oMode=='Delete'){
+                    oChan.setProperty("mode","MultiSelect")
+                }else{
+                   oChan.setProperty("mode","Delete")
+                }
             }
         })
     })

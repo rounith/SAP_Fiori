@@ -6,7 +6,7 @@
 		</headerContent>
         <SearchField id="mysearch" search="onSearch"></SearchField>
         <List id="idList" itemPress="onItemPress" items="{path:'local>/fruits', sorter:{path:'status', group:true}}"
-                mode="MultiSelect">
+                mode="Delete" delete="onDelete">
             <items>
                 <ObjectListItem title="{local>name}" intro="{local>type}" icon="{local>imageURL}"
                     number="{local>price}" numberUnit="{local>currency}" type="Navigation">
@@ -20,11 +20,11 @@
             </items>            
         </List>
         <footer>
-                <Toolbar textDirection="RTL">
+                <Toolbar>
                 <ToolbarSpacer></ToolbarSpacer><!-- used to bring all the elements on right side-->
-                <Button text="Accept" type="Accept"></Button>
-                <Button text="Reject" type="Reject"></Button>
-                <Button text="ShowInConsole"></Button>
+                <Button text="MultiSelect" type="Accept" press="oChange"></Button>
+                <Button text="Reject" type="Reject" press="oChange"></Button>
+                <Button text="ShowInConsole" press="showInConsole"></Button>
                 </Toolbar>
         </footer>
     </Page>
