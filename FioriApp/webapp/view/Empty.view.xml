@@ -1,0 +1,8 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Page id="">
+    <content>
+        <Image backgroundPosition="center" width="100%" src="https://mma.prnewswire.com/media/1631851/Cloud4C_Logo.jpg?p=twitter"></Image>
+    </content>
+    </Page>
+</mvc:View>

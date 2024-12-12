@@ -58,7 +58,7 @@
             "routes":[{
                 "pattern":"",
                 "name":"home",
-                "target":"modi"
+                "target":["modi","empty"]
             },{
                 "pattern":"revanth/{kaven}",
                 "name":"next",
@@ -73,6 +73,11 @@
                 "revanth":{
                     "viewName":"View2",
                     "viewId":"idRevanth",
+                    "controlAggregation":"detailPages"
+                },
+                "empty":{
+                    "viewName":"Empty",
+                    "viewId":"idEmpty",
                     "controlAggregation":"detailPages"
                 }
             }
