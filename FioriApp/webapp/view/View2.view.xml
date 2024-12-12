@@ -4,7 +4,12 @@
         <content>
             <ObjectHeader title="{local>healthBenefit}" intro="{local>name}"
                             number="{local>price}" icon="{local>imageURL}"
-                            numberUnit="{local>currency}"></ObjectHeader>
+                            numberUnit="{local>currency}">
+            </ObjectHeader>
+            <ObjectAttribute text="kdfnjnfjnfjnjefnkajndfksfnjksdf k">
+            </ObjectAttribute>
+            <ObjectAttribute text="HElloniwwnwcnwcjk" textDirection="RTL" title="Hamper">
+            </ObjectAttribute>
         </content>
     </Page>
 </mvc:View>

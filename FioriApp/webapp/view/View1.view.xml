@@ -4,7 +4,6 @@
     	<headerContent>
 			<Button icon="sap-icon://action" tooltip="Next" press="onNext"/>
 		</headerContent>
-        <content>
         <SearchField id="mysearch" search="onSearch"></SearchField>
         <List id="idList" itemPress="onItemPress" items="{path:'local>/fruits', sorter:{path:'status', group:true}}">
             <items>
@@ -19,7 +18,13 @@
                 </ObjectListItem>
             </items>            
         </List>
-        <Text text="{local>/demo}"></Text>
-        </content>
+        <footer>
+                <OverflowToolbar textDirection="RTL">
+                <ToolbarSpacer></ToolbarSpacer><!-- used to bring all the elements on right side-->
+                <Button text="Accept" type="Accept"></Button>
+                <Button text="Reject" type="Reject"></Button>
+                <Button text="ShowInConsole"></Button>
+                </OverflowToolbar>
+        </footer>
     </Page>
 </mvc:View>
