@@ -62,7 +62,7 @@
             },{
                 "pattern":"revanth/{kaven}",
                 "name":"next",
-                "target":"revanth"
+                "target":["modi","revanth"] 
             }],
             "targets":{
                 "modi":{

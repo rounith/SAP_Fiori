@@ -6,9 +6,22 @@
                             number="{local>price}" icon="{local>imageURL}"
                             numberUnit="{local>currency}">
             </ObjectHeader>
-            <ObjectAttribute text="kdfnjnfjnfjnjefnkajndfksfnjksdf k">
+            <IconTabBar>
+                <items>
+                    <IconTabFilter text="More Details" icon="sap-icon://warning">
+                        <Text text="On the way"></Text>
+                    </IconTabFilter>
+                    <IconTabFilter text="Suppliers" icon="sap-icon://supplier">
+                        <Text text="List id being prepared"></Text>
+                    </IconTabFilter>
+                    <IconTabFilter text="Cities" icon="sap-icon://home">
+                        <Text text="Under Contruction"></Text>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+            <ObjectAttribute text="ObjectAttribute">
             </ObjectAttribute>
-            <ObjectAttribute text="HElloniwwnwcnwcjk" textDirection="RTL" title="Hamper">
+            <ObjectAttribute text="ObjectAttribute from right" textDirection="RTL">
             </ObjectAttribute>
         </content>
     </Page>
