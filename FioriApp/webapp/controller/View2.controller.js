@@ -10,9 +10,8 @@ sap.ui.define(
                 this.oRouter=this.getOwnerComponent().getRouter()
                 this.oRouter.getRoute("next").attachMatched(this.herculis, this)
             },
-            showPopup:function(){
-                var msg = 'F4 working';
-                MessageToast.show(msg);
+            showPopup:function(oEvent){
+                MessageToast.show(oEvent.mParameters._userInputValue);
             },  
             herculis:function(oEvent){
                 console.log("Hello this is route name revanth")

@@ -9,24 +9,7 @@
             <IconTabBar>
                 <items>
                     <IconTabFilter text="More Details" icon="sap-icon://warning">
-                        <f:SimpleForm>
-                            <f:content>
-                                <Label text="name"></Label>
-                                <Text text="{local>name}"></Text>
-                                <Label text="type"></Label>
-                                <Text text="{local>type}"></Text>
-                                <Label text="Price"></Label>
-                                <Text text="{local>price}"></Text>
-                                <Label text="color"></Label>
-                                <Text text="{local>color}"></Text>
-                                <Label text="Availability"></Label>
-                                <ObjectStatus text="{local>status}"
-                                            state="{
-                            path: 'local>status',
-                            formatter: '.formatter.getStatus'
-                        }"></ObjectStatus>
-                            </f:content>
-                        </f:SimpleForm>
+                        <core:Fragment fragmentName="cloud4c.fioriApp.fragments.additionalData" type="XML"></core:Fragment>
                     </IconTabFilter>
                     <IconTabFilter text="Suppliers" icon="sap-icon://supplier">
                         <Table items="{local>/suppliers}">
