@@ -70,5 +70,37 @@
             "status": "Out of Stock",
             "price": "200"
         }
+    ],
+    "suppliers": [
+        {
+            "name": "Supplier A",
+            "location": "New York, USA",
+            "status": "Active",
+            "description": "Specializes in organic fruits and vegetables."
+        },
+        {
+            "name": "Supplier B",
+            "location": "Berlin, Germany",
+            "status": "Inactive",
+            "description": "Leading supplier of dairy products."
+        },
+        {
+            "name": "Supplier C",
+            "location": "Tokyo, Japan",
+            "status": "Active",
+            "description": "Known for high-quality seafood exports."
+        },
+        {
+            "name": "Supplier D",
+            "location": "Mumbai, India",
+            "status": "Active",
+            "description": "Provides a wide range of spices and grains."
+        },
+        {
+            "name": "Supplier E",
+            "location": "São Paulo, Brazil",
+            "status": "Inactive",
+            "description": "Focused on tropical fruits like mango and papaya."
+        }
     ]
 }

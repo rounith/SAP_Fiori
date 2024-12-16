@@ -1,8 +1,11 @@
 sap.ui.define(
-    ["sap/ui/core/mvc/Controller"],
-    function(Controller){
+    ["sap/ui/core/mvc/Controller",
+        "cloud4c/fioriApp/util/formatter"
+    ],
+    function(Controller,Formatter){
         "use strict"
         return Controller.extend("cloud4c.fioriApp.controller.View2",{
+            formatter: Formatter,
             onInit:function(){
                 this.oRouter=this.getOwnerComponent().getRouter()
                 this.oRouter.getRoute("next").attachMatched(this.herculis, this)
