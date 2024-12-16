@@ -54,7 +54,7 @@
                                 <ColumnListItem>
                                     <cells>
                                         <Text text="{local>name}"></Text>
-                                        <Text text="{local>location}"></Text>
+                                        <Input value="{local>location}" showValueHelp="true" valueHelpRequest="showPopup"></Input>
                                         <ObjectStatus text="{local>status}"
                                             state="{
                             path: 'local>status',
